@@ -1,0 +1,20 @@
+{
+  "name": "safezonemainserver",
+  "version": "1.0.0",
+  "description": "In this repositorie I going to manage the devlopment process of the main server from the safezone project!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelipeArredond/safezoneMainServer.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FelipeArredond/safezoneMainServer/issues"
+  },
+  "homepage": "https://github.com/FelipeArredond/safezoneMainServer#readme"
+}
