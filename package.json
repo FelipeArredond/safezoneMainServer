@@ -4,7 +4,9 @@
   "description": "In this repositorie I going to manage the devlopment process of the main server from the safezone project!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "lint": "eslint"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,16 @@
   "bugs": {
     "url": "https://github.com/FelipeArredond/safezoneMainServer/issues"
   },
-  "homepage": "https://github.com/FelipeArredond/safezoneMainServer#readme"
+  "homepage": "https://github.com/FelipeArredond/safezoneMainServer#readme",
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "nodemon": "^2.0.19",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "express": "^4.18.1",
+    "faker": "^5.5.3"
+  }
 }
