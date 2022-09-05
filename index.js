@@ -8,5 +8,5 @@ app.use(express.json())
 routerApi(app);
 
 app.listen(port,()=>{
-  console.log('Server running at port ' + port);
+  console.log('Server running at port :' + port);
 });
