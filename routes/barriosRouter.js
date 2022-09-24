@@ -1,5 +1,6 @@
 const express = require('express');
 const barrios = require('../barrios')
+const barriosNew = require('../planeacion_gdb.json')
 
 const router = express.Router();
 
@@ -20,5 +21,10 @@ barriosFiltering();
 router.get(('/'),(req, res) => {
   return res.json(barrios.features)
 })
+
+router.get(('/barriosNew'),(req, res) => {
+  return res.json(barriosNew.features)
+})
+
 
 module.exports = router;
