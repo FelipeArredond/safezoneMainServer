@@ -1,29 +1,25 @@
 const express = require('express');
-const barrios = require('../barrios')
-const barriosNew = require('../planeacion_gdb.json')
+const Barrios = require('./../services/barrios.services');
 
 const router = express.Router();
 
-// barrios.features.map((feature) => {
-//   feature.properties.SECURITYLEVEL = 0;
-// })
-
-const barriosData = [];
-
-const barriosFiltering = () => {
-  barrios.features.map((feature) => {
-    barriosData.push(feature)
-  })
-}
-
-barriosFiltering();
-
-router.get(('/'),(req, res) => {
-  return res.json(barrios.features)
-})
+const barriosNew = new Barrios();
 
 router.get(('/barriosNew'),(req, res) => {
-  return res.json(barriosNew.features)
+  return res.json(barriosNew.returnBarrios())
+})
+
+router.get(('/barriosNames'),(req,res) => {
+  return res.json(barriosNew.returnBarriosNames())
+})
+
+router.get(('/barriosComunas'),(req,res)=>{
+  return res.json(barriosNew.returnBarriosComunas())
+})
+
+router.get('/test',(req,res)=>{
+  let {name} = req.query
+  res.send(name);
 })
 
 
