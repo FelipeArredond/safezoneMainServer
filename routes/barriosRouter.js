@@ -18,8 +18,7 @@ router.get(('/barriosComunas'),(req,res)=>{
 })
 
 router.get('/test',(req,res)=>{
-  let {name} = req.query
-  res.send(name);
+  return res.json(barriosNew.returnBarriosNames());
 })
 
 

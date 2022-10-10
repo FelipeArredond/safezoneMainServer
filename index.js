@@ -16,13 +16,13 @@ const connectionParams={
   useUnifiedTopology: true
 }
 
-const db = mongoose.connect(url,connectionParams)
-  .then( () => {
-      console.log('Connected to the database ')
-  })
-  .catch( (err) => {
-      console.error(`Error connecting to the database. n${err}`);
-  })
+// const db = mongoose.connect(url,connectionParams)
+//   .then( () => {
+//       console.log('Connected to the database ')
+//   })
+//   .catch( (err) => {
+//       console.error(`Error connecting to the database. n${err}`);
+//   })
 
 app.use(express.json())
 app.use(cors());

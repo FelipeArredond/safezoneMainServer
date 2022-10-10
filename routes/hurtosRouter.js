@@ -10,4 +10,10 @@ router.get(('/'),(req, res) => {
   return res.send(hurtos.getData())
 })
 
+router.post(('/'),(req,res)=>{
+  const data = req.body
+  hurtos.addData(data)
+  return res.json(data)
+})
+
 module.exports = router;
