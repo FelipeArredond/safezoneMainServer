@@ -147,8 +147,8 @@ const mySchema = new Schema({
     type: String,
     required: true
   }
-})
+},{collection: 'hurtos'})
 
-const model = mongoose.model('Hurtos', mySchema);
+const Model = mongoose.model('hurtos', mySchema);
 
-module.exports = model;
+module.exports = Model;

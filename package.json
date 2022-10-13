@@ -4,8 +4,8 @@
   "description": "In this repositorie I going to manage the devlopment process of the main server from the safezone project!",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js",
-    "start": "node index.js",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
     "lint": "eslint"
   },
   "repository": {
