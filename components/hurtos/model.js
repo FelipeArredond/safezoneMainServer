@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 
 const mySchema = new Schema({
   fecha_hecho:{
-    type: String,
+    type: Date,
     required: true
   },
   cantidad:{
@@ -144,11 +144,11 @@ const mySchema = new Schema({
     required: true
   },
   fecha_ingestion: {
-    type: String,
+    type: Date,
     required: true
   }
-},{collection: 'hurtos'})
+})
 
-const Model = mongoose.model('hurtos', mySchema);
+const Model = mongoose.model('Hurto', mySchema);
 
 module.exports = Model;

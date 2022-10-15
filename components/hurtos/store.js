@@ -1,4 +1,5 @@
 const db = require('mongoose');
+const response = require('../../network/response')
 const Model = require('./model')
 
 const connectionParams={
@@ -17,16 +18,19 @@ db.connect(url,connectionParams)
   })
 
 function addHurto(hurto){
+  console.log('[POST] Hurtos ' + new Date())
   const newHurto = new Model(hurto);
   newHurto.save();
+  return 'Element added'
 }
 
-async function getHurtos(){
-  const data = await Model.find();
-  return data;
+async function getHurtos(req,res){
+  console.log('[GET] Hurtos ' + new Date())
+  const data = await Model.find({});
+  res.json(data)
 }
 
 module.exports = {
-  add: addHurto,
-  list: getHurtos
+  addHurto,
+  getHurtos
 }

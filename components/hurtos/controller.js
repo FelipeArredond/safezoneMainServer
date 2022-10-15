@@ -1,12 +1,11 @@
 const db = require('./store')
 
 function addHurto(hurto){
-  db.add(hurto);
-  return 'Hurto Added to db'
+  return db.addHurto(hurto);
 };
 
-function listHurtos(){
-  return db.list()
+function listHurtos(req,res){
+  return db.getHurtos(req,res)
 }
 
 module.exports = {
