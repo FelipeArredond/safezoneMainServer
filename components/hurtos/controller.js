@@ -8,7 +8,12 @@ function listHurtos(req,res){
   return db.getHurtos(req,res)
 }
 
+function listPositions(req,res){
+  return db.getAllHurtosPositions(req,res);
+}
+
 module.exports = {
   addHurto,
-  listHurtos
+  listHurtos,
+  listPositions
 }

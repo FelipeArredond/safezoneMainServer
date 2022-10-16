@@ -30,7 +30,18 @@ async function getHurtos(req,res){
   res.json(data)
 }
 
+async function getAllHurtosPositions(req,res){
+  console.log('[GET] Hurtos Positions' + new Date())
+  const data = await Model.find({});
+  let cleanData = []
+  data.map((dat) => {
+    cleanData.push({latitud: dat.latitud, longitud: dat.longitud})
+  })
+  res.json(cleanData)
+}
+
 module.exports = {
   addHurto,
-  getHurtos
+  getHurtos,
+  getAllHurtosPositions
 }

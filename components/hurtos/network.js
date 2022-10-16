@@ -14,4 +14,8 @@ router.post(('/'),(req,res)=>{
   return response.succes(req,res, controller.addHurto(data), 201);
 })
 
+router.get(('/positions'),(req,res)=>{
+  return controller.listPositions(req,res)
+})
+
 module.exports = router;
