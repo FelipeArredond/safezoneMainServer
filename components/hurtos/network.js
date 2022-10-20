@@ -18,4 +18,8 @@ router.get(('/positions'),(req,res)=>{
   return controller.listPositions(req,res)
 })
 
+router.get(('/hurtosPerHood'),(req,res)=>{
+  return controller.listHurtosPerHood(req,res)
+})
+
 module.exports = router;

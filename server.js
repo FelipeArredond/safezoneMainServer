@@ -1,10 +1,13 @@
-const dontenv = require('dotenv');
 const mongoose = require('mongoose');
 const express = require('express');
 const cors = require('cors')
+const jwt = require("jsonwebtoken")
+require('dotenv').config()
 
 const response = require('./network/response');
 const router = require('./network/routes');
+
+console.log(process.env.TESTING)
 
 const app = express();
 
