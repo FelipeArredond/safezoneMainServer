@@ -7,8 +7,6 @@ require('dotenv').config()
 const response = require('./network/response');
 const router = require('./network/routes');
 
-console.log(process.env.TESTING)
-
 const app = express();
 
 app.use(express.json())
