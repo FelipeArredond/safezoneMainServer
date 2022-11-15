@@ -3,6 +3,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const mySchema = new Schema({
+  usuario:{
+    type: String
+  },
   nombre_barrio:{
     type: String,
     required: true
@@ -21,6 +24,10 @@ const mySchema = new Schema({
   },
   descripcion:{
     type: String,
+    required: true
+  },
+  fecha:{
+    type: Date,
     required: true
   }
 })

@@ -1,4 +1,5 @@
 const UserModel = require('./model');
+const ReportsModel = require('../reportes/model')
 
 function addUser(user){
   console.log('[POST] User ' + new Date())
@@ -24,8 +25,20 @@ async function findUser(req,res,userData){
   }
 }
 
+async function getReportsByUser(req,res, userData){
+  console.log('[GET] Reports by Id ' + new Date());
+  const data = await ReportsModel.find({usuario: userData.id}).exec();
+  console.log(data);
+  if(data){
+    res.json(data).status(200);
+  }else{
+    res.json([error]).status(400).send()
+  }
+}
+
 module.exports = {
   addUser,
   getUser,
-  findUser
+  findUser,
+  getReportsByUser
 }

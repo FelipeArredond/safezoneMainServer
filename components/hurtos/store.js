@@ -1,22 +1,5 @@
-const db = require('mongoose');
 const response = require('../../network/response')
 const Model = require('./model')
-require('dotenv').config()
-
-const connectionParams={
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}
-
-const url = process.env.MONGODB_URI
-
-db.connect(url,connectionParams)
-  .then( () => {
-      console.log('Connected to the database ')
-  })
-  .catch( (err) => {
-      console.error(`Error connecting to the database. n${err}`);
-  })
 
 function addHurto(hurto){
   console.log('[POST] Hurtos ' + new Date())

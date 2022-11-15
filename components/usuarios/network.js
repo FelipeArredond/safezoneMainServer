@@ -18,4 +18,9 @@ router.post(('/log'),(req,res)=>{
   return controller.Log(req,res,userData)
 })
 
+router.post(('/reports'),(req,res)=>{
+  const userData = req.body;
+  return controller.reports(req,res,userData)
+})
+
 module.exports = router;

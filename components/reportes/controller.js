@@ -1,6 +1,7 @@
 const db = require('./store')
 
 function addReporte(hurto){
+  hurto = {...hurto, fecha: new Date()}
   return db.addReporte(hurto);
 };
 

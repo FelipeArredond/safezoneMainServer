@@ -9,11 +9,16 @@ function getUsers(req,res){
 }
 
 function Log(req,res,userData){
-  return db.findUser(req,res,userData)
+  return db.findUser(req,res,userData);
+}
+
+function reports(req,res,userData){
+  return db.getReportsByUser(req,res,userData);
 }
 
 module.exports = {
   register,
   getUsers,
-  Log
+  Log,
+  reports
 }
